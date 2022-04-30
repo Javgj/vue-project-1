@@ -1,16 +1,18 @@
 <template>
   <div>
     <div v-if="loading.show">
+      <!-- the-loading -->
       <the-loading></the-loading>
+      <!-- /the-loading -->
     </div>
     <div v-else>
-      <!-- header -->
+      <!-- the-header -->
       <the-header></the-header>
-      <!-- /header -->
+      <!-- /the-header -->
       <router-view></router-view>
       <!-- footer -->
       <the-footer></the-footer>
-      <!-- /footer -->
+      <!-- /the-footer -->
     </div>
   </div>
 </template>

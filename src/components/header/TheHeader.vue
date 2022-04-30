@@ -13,7 +13,7 @@
       <b-navbar-nav class="ml-auto">
         <!-- menu -->
         <b-navbar-nav>
-          <header-nav-item v-for="m of menu" :key="m.id" :menu="m"></header-nav-item>
+          <header-nav-item v-for="menu of navMenu" :key="menu.id" :menu="menu"></header-nav-item>
         </b-navbar-nav>
         <!-- menu -->
 
@@ -40,7 +40,7 @@ export default {
   },
   data () {
     return {
-      menu: navMenu
+      navMenu
     }
   }
 }

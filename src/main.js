@@ -1,7 +1,9 @@
 import Vue from 'vue'
 import App from './App.vue'
 
-// import '@/assets/scss/app.scss'
+// styles
+import '@/assets/scss/app.scss'
+import '@/assets/scss/Roboto/font.css'
 
 // router
 import router from '@/router'

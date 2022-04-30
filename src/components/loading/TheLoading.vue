@@ -24,11 +24,3 @@ export default {
   }
 }
 </script>
-
-<style scoped>
-.loading {
-  position: absolute;
-  left: calc(18% - 45px);
-  top: 45%
-}
-</style>

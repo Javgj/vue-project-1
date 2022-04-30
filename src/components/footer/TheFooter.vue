@@ -1,18 +1,12 @@
 <template>
-  <div class="footer bg-dark navbar">
-    <div>
-      <v-logo width="130" />
-      <div class="text-white">
-        © 2022 Francisco Javier Garcia Jarero
-      </div>
-    </div>
-  </div>
-  <!-- <div id="footer" class="bg-dark text-center">
-    <v-logo width="130" />
+  <div id="footer" class="bg-dark text-center">
+   <div class="container">
+     <v-logo width="130" />
     <div class="text-white">
       © 2022 Francisco Javier Garcia Jarero
     </div>
-  </div> -->
+   </div>
+  </div>
 </template>
 <script>
 export default {
@@ -21,8 +15,15 @@ export default {
 </script>
 
 <style scoped>
-.footer {
-  justify-content: center;
-  text-align: center;
+#footer{
+  margin-top: 262px;
+  width: 100%;
+}
+
+#footer {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 8px;
 }
 </style>
