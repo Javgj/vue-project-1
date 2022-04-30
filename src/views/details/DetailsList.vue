@@ -44,7 +44,7 @@ export default {
         this.$store.commit('SET_CHARACTERS', data)
       },
       get () {
-        return this.getCharacters
+        return this.getCharacters //
       }
     },
 
