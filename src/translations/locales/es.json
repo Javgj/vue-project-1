@@ -1,0 +1,69 @@
+{
+  "es": {
+    "global": {
+      "header": {
+        "menu": {
+          "about_us": "Acerca de",
+          "details": "Detalles"
+        }
+      }
+    },
+    "home": {
+      "welcome": "Bienvenido a Rick y Morty!",
+      "example_txt_1": "Ejemplo 1",
+      "example_txt_2": "Ejemplo 2"
+    },
+    "details": {
+      "title_list": "Lista de personajes",
+      "title_view": "Ver personaje",
+      "cards": {
+        "status": {
+          "alive": "Vivo",
+          "dead": "Muerto",
+          "unknown": "Desconocido"
+        },
+        "species": {
+          "human": "Humano",
+          "alien": "Alien",
+          "poopybutthole": "Poopybutthole",
+          "mythological creature": "Mythological creature",
+          "animal": "Animal",
+          "unknown": "Desconocido",
+          "humanoid": "Humanoide",
+          "robot": "Robot",
+          "disease": "Trastorno",
+          "cronenberg": "Cronenberg"
+        },
+        "gender": {
+          "female": "Mujer",
+          "male": "Hombre",
+          "unknown": "Desconocido",
+          "genderless": "Genderless"
+        }
+      },
+      "button_actions": {
+        "delete": "Eliminar",
+        "information": "Información",
+        "back_to_list": "Volver a la lista"
+      }
+    },
+    "about_us": {
+      "title": "Acerca de",
+      "questions": {
+        "qn_1": {
+          "title": "¿Qué es esto?",
+          "text": "Rick and Morty es un ejemplo basado en al serie de television del show de Rick y Morty. Tú accedearas a algunos personajes. Rick y Morty esta llena de canonica información de la serie de televisión"
+        },
+        "qn_2": {
+          "title": "¿Cómo puedo acceder al proyecto?",
+          "text": "Tu puedes acceder en GitHub.",
+          "link": "https://github.com/"
+        },
+        "qn_3": {
+          "title": "¿Copyright?",
+          "text": "Rick y Morty se creo por Justin Roiland y Dan Harmon para Adult Swim. Los datos e imágenes se utilizan sin reclamación de propiedad y pertenecen a sus respectivos propietarios."
+        }
+      }
+    }
+  }
+}

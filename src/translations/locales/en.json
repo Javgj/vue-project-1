@@ -1,0 +1,71 @@
+{
+  "en": {
+    "global": {
+      "header": {
+        "menu": {
+          "about_us": "About us",
+          "details": "Details"
+        }
+      }
+    },
+    "home": {
+      "welcome": "Welcome to Rick and Morty!",
+      "example_txt_1": "Example 1",
+      "example_txt_2": "Example 2"
+    },
+    "details": {
+      "title_list": "List of Characters",
+      "title_view": "View Character",
+      "cards": {
+        "title_species": "Species:",
+        "title_gender": "Gender:",
+        "status": {
+          "alive": "Alive",
+          "dead": "Dead",
+          "unknown": "Unknown"
+        },
+        "species": {
+          "human": "Human",
+          "alien": "Alien",
+          "poopybutthole": "Poopybutthole",
+          "mythological creature": "Mythological creature",
+          "animal": "Animal",
+          "unknown": "Unknown",
+          "humanoid": "Humanoid",
+          "robot": "Robot",
+          "disease": "Disease",
+          "cronenberg": "Cronenberg"
+        },
+        "gender": {
+          "female": "Female",
+          "male": "Male",
+          "unknown": "Unknown",
+          "genderless": "Genderless"
+        }
+      },
+      "button_actions": {
+        "delete": "Delete",
+        "information": "Information",
+        "back_to_list": "Back to list"
+      }
+    },
+    "about_us": {
+      "title": "About us",
+      "questions": {
+        "qn_1": {
+          "title": "What is this?",
+          "text": "The Rick and Morty is a example based on the television show Rick and Morty. You will have access some of characters. The Rick and Morty is filled with canonical information as seen on the TV show."
+        },
+        "qn_2": {
+          "title": "How can I access to this project?",
+          "text": "You can access on GitHub.",
+          "link": "https://github.com/"
+        },
+        "qn_3": {
+          "title": "Copyright?",
+          "text": "Rick and Morty is created by Justin Roiland and Dan Harmon for Adult Swim. The data and images are used without claim of ownership and belong to their respective owners."
+        }
+      }
+    }
+  }
+}
