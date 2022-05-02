@@ -5,10 +5,10 @@
 
       <h1>{{ $t('home.welcome') }}</h1>
       <b-row>
-        <b-col :lg="6" :xl="6" class="p-5 m-2 border">
+        <b-col :lg="6" :xl="6" class="p-5 m-2 border card-box">
           {{ $t('home.example_txt_1') }}
         </b-col>
-        <b-col class="p-5 m-2 border">
+        <b-col class="p-5 m-2 border card-box">
           {{ $t('home.example_txt_2') }}
         </b-col>
       </b-row>

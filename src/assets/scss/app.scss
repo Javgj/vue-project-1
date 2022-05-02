@@ -1,7 +1,19 @@
 // variables
 @import 'variables';
+// mixins
+@import 'mixins';
 // bootstrap
 @import 'bootstrap/scss/bootstrap';
+
+
+// card
+$bg-card-primary: #000;
+$bg-card-secondary: #423f3f;
+// card box shadow
+$shadow-color-primary: #191970;
+$shadow-color-secondary: #0a505b;
+// card color text
+$color-text: #fff;
 
 html, body {
   background-color: $body-bg;
@@ -13,6 +25,13 @@ html, body {
 
 h1,h2,h3,h4,h5,h6,.h1,.h2,.h3,.h4,.h5,.h6 {
 	font-family: $roboto-bold-condensed !important;
+}
+
+.card-box {
+  @include card($bg-card-primary, $color-text, $shadow-color-primary);
+  &:hover {
+    @include card($bg-card-secondary, $color-text, $shadow-color-secondary);
+  }
 }
 
 
