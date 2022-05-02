@@ -4,14 +4,15 @@ import App from './App.vue'
 // styles
 import '@/assets/scss/app.scss'
 import '@/assets/scss/Roboto/font.css'
+import '@/assets/scss/boostrap.scss'
 
 // router
 import router from '@/router'
 
 // boostrap vue
 import BootstrapVue from 'bootstrap-vue'
-import 'bootstrap/dist/css/bootstrap.css'
-import 'bootstrap-vue/dist/bootstrap-vue.css'
+/* import 'bootstrap/dist/css/bootstrap.css'
+import 'bootstrap-vue/dist/bootstrap-vue.css' */
 
 // i18n
 import { i18n } from '@/plugins/i18n'
