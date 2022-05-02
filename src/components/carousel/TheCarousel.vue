@@ -1,13 +1,12 @@
 <template>
   <div>
     <b-carousel
-      id="carousel-1"
       v-model="slide"
       :interval="4000"
-      controls
-      indicators
-      img-width="800"
-      img-height="240"
+      :controls="controls"
+      :indicators="indicators"
+      :img-width="imgWidth"
+      :img-height="imgHeight"
       @sliding-start="onSlideStart"
       @sliding-end="onSlideEnd">
       <!-- carousel-slide-item -->
@@ -24,6 +23,24 @@ export default {
   name: 'the-carousel',
   components: {
     CarouselSlideItem
+  },
+  props: {
+    imgWidth: {
+      type: [String, Number],
+      default: () => '800'
+    },
+    imgHeight: {
+      type: [String, Number],
+      default: () => '240'
+    },
+    controls: {
+      type: Boolean,
+      default: () => true
+    },
+    indicators: {
+      type: Boolean,
+      default: () => true
+    }
   },
   data () {
     return {

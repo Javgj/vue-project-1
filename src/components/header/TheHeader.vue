@@ -32,8 +32,6 @@ import { navMenu } from '@/components/header/nav-menu'
 
 export default {
   name: 'the-header',
-  props: {
-  },
   components: {
     HeaderI18n,
     HeaderNavItem

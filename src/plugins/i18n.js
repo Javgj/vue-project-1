@@ -20,7 +20,7 @@ const loadedLanguages = ['en']
  */
 function setI18nLanguage (lang) {
   i18n.locale = lang
-  Vue.prototype.$http.defaults.headers.common['Accept-Language'] = lang
+  // Vue.prototype.$http.defaults.headers.common['Accept-Language'] = lang
   return lang
 }
 
@@ -28,22 +28,23 @@ function setI18nLanguage (lang) {
  * @param {String} lang
  * @returns {String}
  */
-export async function loadeLanguageAsync (lang = 'en') {
-  console.log(lang, 'lang')
-  if (i18n.locale === lang) {
+export async function loadedLanguageAsync (lang = 'en') {
+  if (typeof lang !== 'string') return Promise.resolve(lang)
+
+  if (i18n.locale === lang || loadedLanguages.includes(lang)) {
     return Promise.resolve(setI18nLanguage(lang))
   }
 
-  if (loadedLanguages.includes(lang)) {
-    return Promise.resolve(setI18nLanguage(lang))
-  }
+  try {
+    const messages = await import(`@/translations/locales/${lang}.json`)
 
-  const messages = await import(`@/translations/locales/${lang}.json`)
+    if (messages) {
+      i18n.setLocaleMessage(lang, messages[lang])
+      loadedLanguages.push(lang)
 
-  if (messages) {
-    i18n.setLocaleMessage(lang, messages[lang])
-    loadedLanguages.push(lang)
-
-    return setI18nLanguage(lang)
+      return setI18nLanguage(lang)
+    }
+  } catch (error) {
+    throw new Error(`Cannot find module './${lang}.json'`)
   }
 }

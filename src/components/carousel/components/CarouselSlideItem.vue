@@ -4,6 +4,7 @@
       :caption="slider.caption"
       :text="slider.text"
       :img-src="slider.src">
+      <slot name="subtitle" />
     </b-carousel-slide>
   </div>
 </template>

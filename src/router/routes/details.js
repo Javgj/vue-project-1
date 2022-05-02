@@ -7,12 +7,18 @@ export const details = [
       {
         name: 'details-list',
         path: '/details-list',
-        component: () => import(/* webpackChunkName: "details-list" */ '@/views/details/DetailsList')
+        component: () => import(/* webpackChunkName: "details-list" */ '@/views/details/DetailsList'),
+        meta: {
+          template: 'default-template'
+        }
       },
       {
         name: 'details-view',
         path: '/details-view/:id',
-        component: () => import(/* webpackChunkName: "details-view" */ '@/views/details/DetailsView')
+        component: () => import(/* webpackChunkName: "details-view" */ '@/views/details/DetailsView'),
+        meta: {
+          template: 'default-template'
+        }
       }
     ]
   }

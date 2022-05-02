@@ -16,7 +16,7 @@
       <h3>{{ $t('about_us.questions.qn_2.title') }}</h3>
       <p>
         {{ $t('about_us.questions.qn_2.text') }}
-        <a href="#" target="_blank">
+        <a href="https://github.com/Javgj/vue-project-1" target="_blank">
           {{ $t('about_us.questions.qn_2.link') }}
         </a>
       </p>
