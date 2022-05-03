@@ -31,11 +31,8 @@ export default {
   },
   computed: {
     ...mapGetters({
-      getLoading: 'getLoading'
-    }),
-    loading () {
-      return this.getLoading
-    }
+      loading: 'loading'
+    })
   }
 }
 </script>

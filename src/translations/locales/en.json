@@ -8,6 +8,10 @@
         }
       }
     },
+    "not_found": {
+      "title": "We're Sorry 404",
+      "text": "The page you have requested cannot be found."
+    },
     "home": {
       "welcome": "Welcome to Rick and Morty!",
       "example_txt_1": "Example 1",

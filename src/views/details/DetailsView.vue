@@ -38,11 +38,8 @@ export default {
   },
   computed: {
     ...mapGetters({
-      getCharacters: 'getCharacters'
-    }),
-    characters () {
-      return this.getCharacters
-    }
+      characters: 'characters'
+    })
   },
   methods: {
     ...mapActions({
@@ -60,13 +57,16 @@ export default {
     }
   },
   created () {
-    if (this.$route.params.id && this.characters) {
-      const [character] = this.characters.filter(val => val.id === this.$route.params.id)
-      localStorage.setItem('id', this.$route.params.id)
-      this.character = character
-    } else {
-      this.getCharacter(localStorage.getItem('id'))
+    if (!this.$route.params.id) {
+      return this.getCharacter(localStorage.getItem('id'))
     }
+
+    const [character] = this.characters.filter(val => val.id === this.$route.params.id)
+    localStorage.setItem('id', this.$route.params.id)
+    this.character = character
+  },
+  destroyed () {
+    localStorage.removeItem('id')
   }
 }
 </script>

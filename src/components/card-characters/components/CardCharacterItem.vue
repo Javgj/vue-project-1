@@ -19,7 +19,9 @@
         </b-list-group-item>
       </b-list-group>
 
-      <slot name="actions"></slot>
+      <div class="card-actions">
+        <slot name="actions"></slot>
+      </div>
     </b-card>
   </div>
 </template>
@@ -35,3 +37,17 @@ export default {
   }
 }
 </script>
+
+<style lang="scss" scoped>
+.card-body {
+  height: 280px;
+}
+
+.card-actions {
+  bottom: 0px;
+  position: absolute;
+  left: 35px;
+  right: 35px;
+  padding: 15px;
+}
+</style>

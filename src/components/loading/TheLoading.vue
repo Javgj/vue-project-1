@@ -16,11 +16,8 @@ export default {
   name: 'TheLoading',
   computed: {
     ...mapGetters({
-      getLoading: 'getLoading'
-    }),
-    loading () {
-      return this.getLoading
-    }
+      loading: 'loading'
+    })
   }
 }
 </script>

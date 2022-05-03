@@ -5,8 +5,7 @@ export const details = {
     characters: null,
     pagination: {
       currentPage: 1,
-      count: 0,
-      prev: null
+      count: 0
     }
   },
   actions: {
@@ -22,6 +21,8 @@ export const details = {
                 error
               })
             }
+            commit('SET_CHARACTERS', data.results)
+            details.state.pagination.count = data.info.count
             resolve({
               success,
               data
@@ -63,10 +64,10 @@ export const details = {
     }
   },
   getters: {
-    getCharacters: (state) => {
+    characters: (state) => {
       return state.characters
     },
-    getPagination: (state) => {
+    pagination: (state) => {
       return state.pagination
     }
   }

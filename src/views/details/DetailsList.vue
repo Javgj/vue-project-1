@@ -21,7 +21,7 @@
   </div>
 </template>
 <script>
-import { mapActions, mapGetters, mapMutations } from 'vuex'
+import { mapActions, mapGetters } from 'vuex'
 import TheCardCharacters from '@/components/card-characters/TheCardCharacters'
 export default {
   name: 'DetailsList',
@@ -35,60 +35,35 @@ export default {
   },
   computed: {
     ...mapGetters({
-      getCharacters: 'getCharacters',
-      getPagination: 'getPagination'
-    }),
-
-    characters: {
-      set (data) {
-        this.$store.commit('SET_CHARACTERS', data)
-      },
-      get () {
-        return this.getCharacters //
-      }
-    },
-
-    pagination: {
-      set (data) {
-        this.$store.commit('SET_PAGINATION', data)
-      },
-      get () {
-        return this.getPagination
-      }
-    }
+      characters: 'characters',
+      pagination: 'pagination'
+    })
   },
   methods: {
-    ...mapMutations({
-      setCharacters: 'SET_CHARACTERS'
-    }),
     ...mapActions({
       fetchGetCharacters: 'fetchGetCharacters'
     }),
 
     async getListCharacters (id = 1) {
+      if (!id) return
       const { data, success, error } = await this.fetchGetCharacters({ id })
 
       if (!data && !success) {
         return console.error('Error data' + error)
       }
+      this.information = data.results
 
-      this.characters = data.results
-      this.pagination.count = data.info.count
-      this.information = this.characters
+      window.scrollTo({ top: 0, behavior: 'smooth' })
     },
 
     deleteCharacter (id) {
       this.information = this.information.filter(val => val.id !== id)
-
-      this.characters = this.information
     }
   },
   created () {
-    if (!this.characters) {
-      return this.getListCharacters()
-    }
+    if (!this.characters) return this.getListCharacters(this.pagination.currentPage)
 
-    this.$watch('getCharacters', (data) => {
+    this.$watch('characters', (data) => {
       this.information = data.map(val => {
         return {
           id: val.id,

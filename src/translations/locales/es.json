@@ -8,6 +8,10 @@
         }
       }
     },
+    "not_found": {
+      "title": "Lo sentimos 404",
+      "text": "La página tiene una petición que no puede ser encontada."
+    },
     "home": {
       "welcome": "Bienvenido a Rick y Morty!",
       "example_txt_1": "Ejemplo 1",
