@@ -2,7 +2,6 @@ module.exports = {
   verbose: true,
   collectCoverage: true,
   unmockedModulePathPatterns: ['/^node_modules/'],
-  roots: ['<rootDir>/src/', '<rootDir>/tests/'],
   moduleFileExtensions: ['js', 'vue'],
   moduleNameMapper: {
     '^@/(.*)$': '<rootDir>/src/$1'

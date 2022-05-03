@@ -1,14 +1,14 @@
 <template>
   <div>
     <!-- v-banner -->
-    <v-banner
+    <VBanner
       :title="$t('details.title_view')"
       src="https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/rick-morty-season-5-finale-1631266872.jpg?crop=1.00xw:0.898xh;0,0&resize=1200:*"
       alt="img-1" />
     <!-- / v-banner -->
     <b-container class="p-5 offset-lg-4 offset-md-3">
       <!-- card-character-item -->
-      <card-character-item :character="character">
+      <CardCharacterItem :character="character">
         <template #actions>
           <div class="text-center">
             <b-button
@@ -18,7 +18,7 @@
             </b-button>
           </div>
         </template>
-      </card-character-item>
+      </CardCharacterItem>
       <!-- /card-character-item -->
     </b-container>
   </div>
@@ -27,7 +27,7 @@
 import { mapActions, mapGetters } from 'vuex'
 import CardCharacterItem from '@/components/card-characters/components/CardCharacterItem'
 export default {
-  name: 'details-view',
+  name: 'DetailsView',
   components: {
     CardCharacterItem
   },

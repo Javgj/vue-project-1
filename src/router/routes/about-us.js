@@ -4,7 +4,7 @@ export const aboutUs = [
     path: '/about-us',
     component: () => import(/* webpackChunkName: "about-us" */ '@/views/about-us/AboutUs'),
     meta: {
-      template: 'default-template'
+      template: 'DefaultTemplate'
     }
   }
 ]

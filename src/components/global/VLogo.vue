@@ -9,7 +9,7 @@
 </template>
 <script>
 export default {
-  name: 'v-logo',
+  name: 'VLogo',
   props: {
     src: {
       type: String,

@@ -11,7 +11,7 @@
 
 <script>
 export default {
-  name: 'v-banner',
+  name: 'VBanner',
   props: {
     title: {
       type: String,

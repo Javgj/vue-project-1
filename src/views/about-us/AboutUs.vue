@@ -30,6 +30,6 @@
 </template>
 <script>
 export default {
-  name: 'about-us'
+  name: 'AboutUs'
 }
 </script>

@@ -13,7 +13,7 @@
 <script>
 import { mapGetters } from 'vuex'
 export default {
-  name: 'the-loading',
+  name: 'TheLoading',
   computed: {
     ...mapGetters({
       getLoading: 'getLoading'

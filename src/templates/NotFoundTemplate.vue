@@ -10,6 +10,11 @@
     </b-container>
   </div>
 </template>
+<script>
+export default {
+  name: 'NotFoundTemplate'
+}
+</script>
 <style scoped>
 .title {
   font-size: 100px

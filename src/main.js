@@ -3,7 +3,7 @@ import App from './App.vue'
 
 // styles
 import '@/assets/scss/app.scss'
-import '@/assets/scss/Roboto/font.css'
+import '@/assets/fonts/Roboto/font.css'
 import '@/assets/scss/boostrap.scss'
 
 // router

@@ -1,21 +1,21 @@
 <template>
   <div>
     <!-- v-banner -->
-    <v-banner
+    <VBanner
       :title="$t('details.title_list')"
       src="https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/rick-morty-season-5-finale-1631266872.jpg?crop=1.00xw:0.898xh;0,0&resize=1200:*"
       alt="img-1" />
     <!-- / v-banner -->
     <b-container>
       <!-- the-card-characters -->
-      <the-card-characters :characters="information" @delete-character="deleteCharacter">
+      <TheCardCharacters :characters="information" @delete-character="deleteCharacter">
         <b-pagination
           v-model="pagination.currentPage"
           :total-rows="pagination.count"
           :per-page="information.length"
           @input="getListCharacters(pagination.currentPage)">
         </b-pagination>
-      </the-card-characters>
+      </TheCardCharacters>
        <!-- /the-card-characters -->
     </b-container>
   </div>
@@ -24,7 +24,7 @@
 import { mapActions, mapGetters, mapMutations } from 'vuex'
 import TheCardCharacters from '@/components/card-characters/TheCardCharacters'
 export default {
-  name: 'details-list',
+  name: 'DetailsList',
   components: {
     TheCardCharacters
   },

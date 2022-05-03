@@ -11,7 +11,7 @@
 
 <script>
 export default {
-  name: 'carousel-slide-item',
+  name: 'CarouselSlideItem',
   props: {
     slider: {
       type: Object

@@ -10,7 +10,7 @@
       @sliding-start="onSlideStart"
       @sliding-end="onSlideEnd">
       <!-- carousel-slide-item -->
-      <carousel-slide-item v-for="s of slider" :key="s.id" :slider="s" />
+      <CarouselSlideItem v-for="s of slider" :key="s.id" :slider="s" />
       <!-- / carousel-slide-item -->
     </b-carousel>
   </div>
@@ -19,8 +19,9 @@
 <script>
 import CarouselSlideItem from '@/components/carousel/components/CarouselSlideItem'
 import { slider } from '@/components/carousel/slider'
+
 export default {
-  name: 'the-carousel',
+  name: 'TheCarousel',
   components: {
     CarouselSlideItem
   },
@@ -50,10 +51,10 @@ export default {
     }
   },
   methods: {
-    onSlideStart (slide) {
+    onSlideStart () {
       this.sliding = true
     },
-    onSlideEnd (slide) {
+    onSlideEnd () {
       this.sliding = false
     }
   }

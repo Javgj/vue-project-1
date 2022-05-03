@@ -1,7 +1,7 @@
 <template>
   <div>
     <b-container class="my-4 text-center">
-      <the-carousel></the-carousel>
+      <TheCarousel></TheCarousel>
 
       <h1>{{ $t('home.welcome') }}</h1>
       <b-row>
@@ -18,7 +18,7 @@
 <script>
 import TheCarousel from '@/components/carousel/TheCarousel'
 export default {
-  name: 'home-view',
+  name: 'HomeView',
   components: {
     TheCarousel
   }

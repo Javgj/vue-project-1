@@ -9,7 +9,7 @@
 
 <script>
 export default {
-  name: 'header-menu-item',
+  name: 'HeaderMenuItem',
   props: {
     menu: {
       type: Object,

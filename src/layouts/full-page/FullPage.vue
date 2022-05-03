@@ -2,16 +2,16 @@
   <div>
     <div v-if="loading.show">
       <!-- the-loading -->
-      <the-loading></the-loading>
+      <TheLoading></TheLoading>
       <!-- /the-loading -->
     </div>
     <div v-else>
       <!-- the-header -->
-      <the-header></the-header>
+      <TheHeader></TheHeader>
       <!-- /the-header -->
       <router-view></router-view>
       <!-- footer -->
-      <the-footer></the-footer>
+      <TheFooter></TheFooter>
       <!-- /the-footer -->
     </div>
   </div>
@@ -23,7 +23,7 @@ import TheFooter from '@/components/footer/TheFooter'
 import TheLoading from '@/components/loading/TheLoading'
 
 export default {
-  name: 'full-page',
+  name: 'FullPage',
   components: {
     TheHeader,
     TheFooter,

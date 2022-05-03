@@ -9,7 +9,7 @@
         lg="3"
         xl="3">
         <!-- card-character-item -->
-        <card-character-item :character="character">
+        <CardCharacterItem :character="character">
           <template #actions>
             <b-button
               size="sm"
@@ -25,7 +25,7 @@
               {{ $t('details.button_actions.delete') }}
             </b-button>
           </template>
-        </card-character-item>
+        </CardCharacterItem>
         <!-- /card-character-item -->
       </b-col>
     </b-row>
@@ -36,7 +36,7 @@
 <script>
 import CardCharacterItem from '@/components/card-characters/components/CardCharacterItem'
 export default {
-  name: 'the-card-characters',
+  name: 'TheCardCharacters',
   props: {
     characters: {
       type: Array,

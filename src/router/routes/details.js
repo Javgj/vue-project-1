@@ -9,7 +9,7 @@ export const details = [
         path: '/details-list',
         component: () => import(/* webpackChunkName: "details-list" */ '@/views/details/DetailsList'),
         meta: {
-          template: 'default-template'
+          template: 'DefaultTemplate'
         }
       },
       {
@@ -17,7 +17,7 @@ export const details = [
         path: '/details-view/:id',
         component: () => import(/* webpackChunkName: "details-view" */ '@/views/details/DetailsView'),
         meta: {
-          template: 'default-template'
+          template: 'DefaultTemplate'
         }
       }
     ]

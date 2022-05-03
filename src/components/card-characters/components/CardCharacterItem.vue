@@ -26,7 +26,7 @@
 
 <script>
 export default {
-  name: 'card-character-item',
+  name: 'CardCharacterItem',
   props: {
     character: {
       type: Object,

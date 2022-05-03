@@ -4,7 +4,7 @@
     type="dark"
     variant="dark">
     <b-navbar-brand to="/home">
-      <v-logo width="100" />
+      <VLogo width="100" />
     </b-navbar-brand>
 
     <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
@@ -13,12 +13,12 @@
       <b-navbar-nav class="ml-auto">
         <!-- menu -->
         <b-navbar-nav>
-          <header-nav-item v-for="menu of navMenu" :key="menu.id" :menu="menu"></header-nav-item>
+          <HeaderNavItem v-for="menu of navMenu" :key="menu.id" :menu="menu" />
         </b-navbar-nav>
         <!-- menu -->
 
         <!-- i18n -->
-        <header-i18n></header-i18n>
+        <HeaderI18n />
         <!-- i18n -->
       </b-navbar-nav>
     </b-collapse>
@@ -31,7 +31,7 @@ import HeaderNavItem from '../header/components/HeaderNavItem'
 import { navMenu } from '@/components/header/nav-menu'
 
 export default {
-  name: 'the-header',
+  name: 'TheHeader',
   components: {
     HeaderI18n,
     HeaderNavItem
