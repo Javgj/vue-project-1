@@ -3,18 +3,18 @@ import Vue from 'vue'
 class Request {
   /**
    *
-   * @param {String} module
+   * @param {String} path
    * @param {String} method
    * @param {Object} body
    * @param {Boolean} isParams
    * @returns {Promise<{data: Object, success: Boolean, status: number} | {data: Object, success: Boolean, status: number, errors: Object | String}>}
    */
-  Send (module, method = 'get', body = {}, isParams = false) {
+  Send (path, method = 'get', body = {}, isParams = false) {
     try {
       return new Promise((resolve) => {
         Vue.prototype.$http({
           method,
-          url: `${Vue.prototype.$http.defaults.baseURL}/${module}`,
+          url: `${Vue.prototype.$http.defaults.baseURL}/${path}`,
           data: (!isParams) ? this.bodyToJsonStringify(body) : {},
           params: this.bodyToParams(body)
         }).then(({ status, data }) => {
@@ -32,7 +32,7 @@ class Request {
             status
           })
         }).catch(err => {
-          console.error(`This is a error: ${err.message}`)
+          // console.error(`This is a error: ${err.message}`)
           return resolve({
             data: null,
             success: false,
